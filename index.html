@@ -355,6 +355,112 @@ input:focus,select:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0
 .syncbox small{font-size:13px;color:var(--muted);line-height:1.45}
 .syncbox.err small{color:var(--out)}
 input[type=file]{width:100%;font-size:14px;padding:12px;border:1.5px dashed var(--line);border-radius:18px;background:var(--surface)}
+
+/* ===== Neon: bentuk bersama (terang dan gelap) ===== */
+.greet{align-items:flex-start}
+.greet>div{gap:4px}
+.greet h1{font-size:29px;line-height:1.12;letter-spacing:-.02em}
+.wx{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;max-width:none;border-radius:0}
+.wx .wt{flex-direction:row;align-items:center;gap:8px;flex-wrap:wrap}
+.wx .wd{font-size:14.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
+.wx .wr::before{content:"\2022";margin-right:6px;color:var(--muted)}
+.wx .wr b{font-size:14.5px;font-weight:500;color:var(--muted);font-family:var(--font-body)}
+.wx .wr small{font-size:14.5px;font-weight:500;max-width:none}
+.wx svg.i{display:none}
+.tiles{gap:6px}
+.tile{background:none!important;border:0!important;box-shadow:none!important;padding:6px 0;gap:10px;font-weight:600;font-size:14.5px}
+.tile span.ic{width:60px;height:60px;border-radius:50%;background:color-mix(in srgb,var(--tc,var(--brand)) 10%,transparent);box-shadow:0 0 0 1.5px color-mix(in srgb,var(--tc,var(--brand)) 70%,transparent)}
+.tile svg.i{width:27px;height:27px}
+.ico,.mrow .mi,.st2 .sic{border-radius:50%}
+.hero .two.nl{display:grid;grid-template-columns:1fr 1px 1fr;gap:12px;align-items:center}
+.hero .two.nl>div{background:none;padding:0;flex-direction:row;align-items:center;gap:12px}
+.hero .two.nl .vd{width:1px;height:46px;background:rgba(255,255,255,.22);padding:0}
+.hero .two.nl .ai{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center}
+.hero .two.nl .ai svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.hero .two.nl .a .ai{background:rgba(70,240,160,.2);color:#6dffb0}
+.hero .two.nl .b .ai{background:rgba(255,107,115,.2);color:#ff8a8f}
+.hero .two.nl .tx{display:flex;flex-direction:column;gap:2px;min-width:0}
+.hero .two.nl b{font-size:clamp(15px,5vw,20px);white-space:nowrap}
+.hero .two.nl .lbl{text-transform:uppercase;font-size:12px}
+.tg{display:flex;align-items:center;gap:16px}
+.ring2{position:relative;width:98px;height:98px;flex:none}
+.ring2 svg{width:100%;height:100%;transform:rotate(-90deg);display:block}
+.ring2 b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-num);font-size:25px;color:var(--in);letter-spacing:-.03em}
+.tgr{flex:1;min-width:0;display:flex;flex-direction:column;gap:9px;align-items:flex-end}
+.tgr .ptrk{width:100%;height:11px;border-radius:99px;background:rgba(120,160,255,.18);overflow:hidden}
+.tgr .ptrk i{display:block;height:100%;border-radius:99px;transition:width .6s ease-out}
+.tgr .tgn{font-size:15px;color:var(--muted);white-space:nowrap}
+.tgr .tgn b{color:var(--ink);font-size:20px}
+.wplot{height:128px;gap:10px;padding-top:8px}
+.wplot .wbar{position:relative;border-radius:5px;border:1px solid rgba(255,255,255,.38);background:linear-gradient(180deg,#5af5b0,#2f7bff)!important}
+.wplot .wbar::before{content:"";position:absolute;left:-1px;right:-1px;top:-6px;height:12px;background:linear-gradient(180deg,#b9ffdc,#62f2b0);clip-path:polygon(0 50%,22% 0,78% 0,100% 50%,78% 100%,22% 100%)}
+.wplot .wbar:not(.on):not(.today){background:var(--soft)!important;border-color:transparent;box-shadow:none}
+.wplot .wbar:not(.on):not(.today)::before{display:none}
+.wplot .wbar.today{outline:2px solid #7dffb4;outline-offset:3px;border-radius:7px}
+.wlabels span.today{border:1.5px solid #7dffb4;border-radius:99px;padding:2px 0;color:#7dffb4}
+.wline{border-top:1.5px dashed var(--c-send)}
+.card.w7 .sect-h{align-items:flex-start}
+.card.w7 .tot{text-align:right;display:flex;flex-direction:column;line-height:1.2}
+.card.w7 .tot small{font-size:12.5px;color:var(--muted)}
+.card.w7 .tot b{font-size:18px}
+.theme-sw{margin-top:14px}
+.authseg button[aria-selected=true]{background:var(--act);color:var(--on-act);box-shadow:0 4px 12px color-mix(in srgb,var(--act) 45%,transparent)}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]){--bg:#050b1a; --surface:#0c1630; --ink:#eaf1ff; --muted:#8fa3cc; --line:#1d2c55; --soft:#16233f;
+ --brand:#58b0ff; --brand-2:#46f0a0; --act:#2f8cff; --on-act:#021022; --btn-a:#2f7bff; --btn-b:#22d0ff; --on-btn:#021022;
+ --lime:#46f0a0; --lime-2:#22d0ff; --on-lime:#03201a;
+ --in:#46f0a0; --in-soft:rgba(70,240,160,.13); --out:#ff6b73; --out-soft:rgba(255,107,115,.13); --warn:#ffd24d; --warn-soft:rgba(255,210,77,.15);
+ --c-ride:#46f0a0; --c-send:#ffc24d; --c-food:#ff8a50; --c-mart:#b08cff; --c-kerja:#58b0ff; --c-lain:#9db3cf;
+ --hero-a:#0b1a4a; --hero-b:#0d4a80; --hero-c:#2f9a74;
+ --shadow:0 10px 28px rgba(0,0,0,.4); --shadow-hero:0 16px 34px rgba(0,0,0,.5); color-scheme:dark;}
+:root:not([data-theme="light"]) body{background:radial-gradient(90% 45% at 0% 0%,rgba(36,104,255,.22),transparent 62%),radial-gradient(70% 40% at 100% 20%,rgba(34,230,160,.11),transparent 60%),var(--bg);background-attachment:fixed}
+:root:not([data-theme="light"]) .card,:root:not([data-theme="light"]) .stat,:root:not([data-theme="light"]) .dn,:root:not([data-theme="light"]) .wx,:root:not([data-theme="light"]) .iconbtn,:root:not([data-theme="light"]) .datenav .dl,:root:not([data-theme="light"]) .box{background:linear-gradient(165deg,rgba(255,255,255,.075),rgba(255,255,255,.02)),var(--surface);border:1px solid rgba(110,165,255,.26);box-shadow:0 12px 30px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06)}
+:root:not([data-theme="light"]) .hero{border:1.5px solid transparent;background:linear-gradient(160deg,rgba(18,44,98,.94),rgba(10,38,70,.92) 55%,rgba(13,72,70,.9)) padding-box,linear-gradient(135deg,#3b8cff,#46f0a0) border-box;box-shadow:0 0 28px rgba(60,160,255,.30),0 14px 34px rgba(0,0,0,.5)}
+:root:not([data-theme="light"]) .hero .big{text-shadow:0 0 22px rgba(120,200,255,.45)}
+:root:not([data-theme="light"]) .hero .big .cur{color:#7dffb4}
+:root:not([data-theme="light"]) nav.dock{background:rgba(9,17,38,.88);border:1px solid rgba(110,165,255,.3);box-shadow:0 0 22px rgba(60,140,255,.18),0 16px 36px rgba(0,0,0,.55)}
+:root:not([data-theme="light"]) .mid .dk[aria-current="page"]{color:#5fd0ff}
+:root:not([data-theme="light"]) .mid .dk[aria-current="page"] svg.i{filter:drop-shadow(0 0 6px rgba(95,208,255,.8))}
+:root:not([data-theme="light"]) .catat{background:linear-gradient(135deg,#46f0a0,#2bb8ff);color:#03201a;box-shadow:0 0 22px rgba(70,240,160,.5)}
+:root:not([data-theme="light"]) .mid .catat{box-shadow:0 0 24px rgba(70,240,160,.6),0 8px 18px rgba(0,0,0,.5)}
+:root:not([data-theme="light"]) .btn{box-shadow:0 0 18px rgba(47,123,255,.4)}
+:root:not([data-theme="light"]) .avatar{box-shadow:0 0 0 2px var(--brand),0 0 14px rgba(70,150,255,.65)}
+:root:not([data-theme="light"]) .tile span.ic{box-shadow:0 0 0 1.5px color-mix(in srgb,var(--tc) 75%,transparent),0 0 18px color-mix(in srgb,var(--tc) 50%,transparent)}
+:root:not([data-theme="light"]) .wplot .wbar{box-shadow:0 0 16px rgba(70,240,160,.3)}
+:root:not([data-theme="light"]) .ico{box-shadow:0 0 0 1px color-mix(in srgb,var(--tc,var(--in)) 55%,transparent),0 0 12px color-mix(in srgb,var(--tc,var(--in)) 30%,transparent)}
+:root:not([data-theme="light"]) .ring2 .rg{filter:drop-shadow(0 0 5px rgba(70,240,160,.7))}
+:root:not([data-theme="light"]) .ring2 b{text-shadow:0 0 14px rgba(70,240,160,.6)}
+:root:not([data-theme="light"]) .seg4 button[aria-selected="true"],:root:not([data-theme="light"]) .seg3 button[aria-selected="true"],:root:not([data-theme="light"]) .seg2 button[aria-selected="true"]{box-shadow:0 0 14px rgba(47,140,255,.5)}
+:root:not([data-theme="light"]) input[type=text],:root:not([data-theme="light"]) input[type=email],:root:not([data-theme="light"]) input[type=password],:root:not([data-theme="light"]) input[type=number],:root:not([data-theme="light"]) input[type=date],:root:not([data-theme="light"]) input[type=month],:root:not([data-theme="light"]) select{background:rgba(255,255,255,.04)}
+:root:not([data-theme="light"]) #sheet{background:rgba(2,6,16,.72)}
+}
+:root[data-theme="dark"]{--bg:#050b1a; --surface:#0c1630; --ink:#eaf1ff; --muted:#8fa3cc; --line:#1d2c55; --soft:#16233f;
+ --brand:#58b0ff; --brand-2:#46f0a0; --act:#2f8cff; --on-act:#021022; --btn-a:#2f7bff; --btn-b:#22d0ff; --on-btn:#021022;
+ --lime:#46f0a0; --lime-2:#22d0ff; --on-lime:#03201a;
+ --in:#46f0a0; --in-soft:rgba(70,240,160,.13); --out:#ff6b73; --out-soft:rgba(255,107,115,.13); --warn:#ffd24d; --warn-soft:rgba(255,210,77,.15);
+ --c-ride:#46f0a0; --c-send:#ffc24d; --c-food:#ff8a50; --c-mart:#b08cff; --c-kerja:#58b0ff; --c-lain:#9db3cf;
+ --hero-a:#0b1a4a; --hero-b:#0d4a80; --hero-c:#2f9a74;
+ --shadow:0 10px 28px rgba(0,0,0,.4); --shadow-hero:0 16px 34px rgba(0,0,0,.5); color-scheme:dark;}
+:root[data-theme="dark"] body{background:radial-gradient(90% 45% at 0% 0%,rgba(36,104,255,.22),transparent 62%),radial-gradient(70% 40% at 100% 20%,rgba(34,230,160,.11),transparent 60%),var(--bg);background-attachment:fixed}
+:root[data-theme="dark"] .card,:root[data-theme="dark"] .stat,:root[data-theme="dark"] .dn,:root[data-theme="dark"] .wx,:root[data-theme="dark"] .iconbtn,:root[data-theme="dark"] .datenav .dl,:root[data-theme="dark"] .box{background:linear-gradient(165deg,rgba(255,255,255,.075),rgba(255,255,255,.02)),var(--surface);border:1px solid rgba(110,165,255,.26);box-shadow:0 12px 30px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06)}
+:root[data-theme="dark"] .hero{border:1.5px solid transparent;background:linear-gradient(160deg,rgba(18,44,98,.94),rgba(10,38,70,.92) 55%,rgba(13,72,70,.9)) padding-box,linear-gradient(135deg,#3b8cff,#46f0a0) border-box;box-shadow:0 0 28px rgba(60,160,255,.30),0 14px 34px rgba(0,0,0,.5)}
+:root[data-theme="dark"] .hero .big{text-shadow:0 0 22px rgba(120,200,255,.45)}
+:root[data-theme="dark"] .hero .big .cur{color:#7dffb4}
+:root[data-theme="dark"] nav.dock{background:rgba(9,17,38,.88);border:1px solid rgba(110,165,255,.3);box-shadow:0 0 22px rgba(60,140,255,.18),0 16px 36px rgba(0,0,0,.55)}
+:root[data-theme="dark"] .mid .dk[aria-current="page"]{color:#5fd0ff}
+:root[data-theme="dark"] .mid .dk[aria-current="page"] svg.i{filter:drop-shadow(0 0 6px rgba(95,208,255,.8))}
+:root[data-theme="dark"] .catat{background:linear-gradient(135deg,#46f0a0,#2bb8ff);color:#03201a;box-shadow:0 0 22px rgba(70,240,160,.5)}
+:root[data-theme="dark"] .mid .catat{box-shadow:0 0 24px rgba(70,240,160,.6),0 8px 18px rgba(0,0,0,.5)}
+:root[data-theme="dark"] .btn{box-shadow:0 0 18px rgba(47,123,255,.4)}
+:root[data-theme="dark"] .avatar{box-shadow:0 0 0 2px var(--brand),0 0 14px rgba(70,150,255,.65)}
+:root[data-theme="dark"] .tile span.ic{box-shadow:0 0 0 1.5px color-mix(in srgb,var(--tc) 75%,transparent),0 0 18px color-mix(in srgb,var(--tc) 50%,transparent)}
+:root[data-theme="dark"] .wplot .wbar{box-shadow:0 0 16px rgba(70,240,160,.3)}
+:root[data-theme="dark"] .ico{box-shadow:0 0 0 1px color-mix(in srgb,var(--tc,var(--in)) 55%,transparent),0 0 12px color-mix(in srgb,var(--tc,var(--in)) 30%,transparent)}
+:root[data-theme="dark"] .ring2 .rg{filter:drop-shadow(0 0 5px rgba(70,240,160,.7))}
+:root[data-theme="dark"] .ring2 b{text-shadow:0 0 14px rgba(70,240,160,.6)}
+:root[data-theme="dark"] .seg4 button[aria-selected="true"],:root[data-theme="dark"] .seg3 button[aria-selected="true"],:root[data-theme="dark"] .seg2 button[aria-selected="true"]{box-shadow:0 0 14px rgba(47,140,255,.5)}
+:root[data-theme="dark"] input[type=text],:root[data-theme="dark"] input[type=email],:root[data-theme="dark"] input[type=password],:root[data-theme="dark"] input[type=number],:root[data-theme="dark"] input[type=date],:root[data-theme="dark"] input[type=month],:root[data-theme="dark"] select{background:rgba(255,255,255,.04)}
+:root[data-theme="dark"] #sheet{background:rgba(2,6,16,.72)}
 </style>
 
 <div class="app" id="view"></div>
@@ -374,6 +480,16 @@ var SERVICES=['GoRide','GoSend','GoFood','GoMart','Lainnya'];
 var CATS=['BBM','Makan','Servis','Parkir','Pulsa','Lainnya'];
 var DOW=['Min','Sen','Sel','Rab','Kam','Jum','Sab'];
 /* ---------- Bahasa (id / en / su) ---------- */
+var LST='saku-narik-theme',THEME='gelap';
+try{var _t=localStorage.getItem(LST);if(_t==='auto'||_t==='terang'||_t==='gelap')THEME=_t}catch(e){}
+function applyTheme(){
+  var r=document.documentElement;if(THEME==='auto')r.removeAttribute('data-theme');else r.setAttribute('data-theme',THEME==='gelap'?'dark':'light');
+  var dark=THEME==='gelap'||(THEME==='auto'&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);
+  var m=document.querySelector('meta[name=theme-color]');if(m)m.setAttribute('content',dark?'#050b1a':'#eaf3fd');
+  try{if(window.AndroidBridge&&window.AndroidBridge.setBars)window.AndroidBridge.setBars(dark?'#050b1a':'#EAF3FD',dark)}catch(e){}
+}
+applyTheme();
+try{if(window.matchMedia)matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(THEME==='auto')applyTheme()})}catch(e){}
 var LSL='saku-narik-lang',LANG='id';
 try{var _l=localStorage.getItem(LSL);if(_l==='en'||_l==='su')LANG=_l}catch(e){}
 var NAMES={
@@ -392,6 +508,18 @@ function DF(d,o){
   return s;
 }
 var DICT={
+"Atur Target":["Set Target", "Atur Target"],
+"Tema":["Theme", "Téma"],
+"Otomatis":["Automatic", "Otomatis"],
+"Terang":["Light", "Caang"],
+"Gelap":["Dark", "Poék"],
+"Total 7 hari":["7-day total", "Total 7 poé"],
+"Baca nominal dari foto":["Read amount from photo", "Baca nominal tina poto"],
+"Membaca foto… pertama kali butuh internet, bisa 10 sampai 40 detik.":["Reading photo… needs internet the first time, can take 10 to 40 seconds.", "Maca poto… mimiti butuh internét, bisa 10 nepi ka 40 detik."],
+"Nominal tidak terbaca. Isi manual, atau coba foto yang lebih jelas.":["Amount not readable. Fill it in manually, or try a clearer photo.", "Nominal teu kabaca. Eusian manual, atawa cobaan poto nu leuwih jelas."],
+"Terbaca":["Read", "Kabaca"],
+"Butuh internet untuk memuat pembaca foto. Coba lagi saat online.":["Internet is needed to load the photo reader. Try again when online.", "Butuh internét pikeun ngamuat pamaca poto. Cobaan deui lamun online."],
+"Foto tidak bisa dibaca. Isi manual.":["The photo could not be read. Fill it in manually.", "Poto teu bisa dibaca. Eusian manual."],
 "Foto struk atau screenshot (opsional)":["Receipt or screenshot photo (optional)", "Poto struk atawa screenshot (opsional)"],
 "Lampirkan foto":["Attach photo", "Lampirkeun poto"],
 "Hapus foto":["Remove photo", "Piceun poto"],
@@ -1115,20 +1243,21 @@ function viewBeranda(){
   var t=todayStr(),a=agg(t,t),st=getSettings(),b=bepCalc(st),h='';
   h+=brandBar('DompetKerja');
   h+=statusBanner();
-  h+='<div class="greet"><div><h1>'+greeting()+'</h1><p class="quote">'+quoteOf()+'</p></div>'+wxChip()+'</div>';
+  h+='<div class="greet"><div>'+wxChip()+'<h1>'+greeting()+'</h1><p class="quote">'+quoteOf()+'</p></div></div>';
   setTimeout(function(){loadWx(false)},0);
   h+='<section class="hero"><div class="row2"><span class="lbl">Bersih hari ini</span><span class="pill">'+a.orders+' order</span></div><div class="big'+(a.bersih<0?' neg':'')+'">'+big(a.bersih)+'</div>'+
-    '<div class="two"><div class="a"><span class="lbl">Masuk​</span><b>'+rp(a.masuk)+'</b></div><div class="b"><span class="lbl">Keluar​</span><b>'+rp(a.keluar)+'</b></div></div></section>';
-  h+='<div class="tiles">'+[['hutang','Hutang','hutang','--c-send'],['bep','Target Bersih','bep','--c-kerja'],['jatah','Jatah','jatah','--c-mart']].map(function(x){
+    '<div class="two nl"><div class="a"><span class="ai"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></span><span class="tx"><span class="lbl">Masuk​</span><b>'+rp(a.masuk)+'</b></span></div><div class="vd"></div><div class="b"><span class="ai"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span><span class="tx"><span class="lbl">Keluar​</span><b>'+rp(a.keluar)+'</b></span></div></div></section>';
+  h+='<div class="tiles">'+[['hutang','Hutang','hutang','--c-send'],['bep','Atur Target','bep','--c-kerja'],['jatah','Jatah','jatah','--c-mart']].map(function(x){
     return '<button class="tile" type="button" data-act="page" data-p="'+x[0]+'"><span class="ic" style="--tc:var('+x[3]+')">'+ic(x[2])+'</span>'+x[1]+'</button>'}).join('')+'</div>';
 
   var g=a.inSrc.ojol;
   if(b.bep>0){
     var pct=Math.min(100,g/b.bep*100),ok=g>=b.bep,col=ok?'var(--in)':'var(--c-send)';
-    h+='<section class="card compact"><div class="sect-h"><h2>Target Bersih hari ini</h2><button class="link" type="button" data-act="page" data-p="bep">Detail</button></div>'+
-      '<div class="pbar"><b class="pp">'+Math.round(g/b.bep*100)+'%</b><div class="pt2"><div class="ptrk"><i style="width:'+pct.toFixed(1)+'%;background:'+col+'"></i></div><span>dari target harian</span></div></div>'+
-      '<div class="kv"><span class="muted">Gojek hari ini</span><b class="num">'+rp(g)+'</b></div><div class="kv"><span class="muted">Target harian</span><b class="num">'+rp(b.bep)+'</b></div>'+
-      '<div class="tag '+(ok?'in':'warn')+'" style="align-self:flex-start">'+(ok?'Target tercapai, lebih '+rp(g-b.bep):'Kurang '+rp(b.bep-g)+' lagi dari target')+'</div></section>';
+    var pc2=Math.round(g/b.bep*100),C2=2*Math.PI*42,len2=Math.min(1,g/b.bep)*C2;
+    h+='<section class="card compact"><div class="sect-h"><h2>Target Bersih hari ini</h2><button class="link" type="button" data-act="page" data-p="bep">Detail ›</button></div>'+
+      '<div class="tg"><div class="ring2"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#46f0a0"/><stop offset="1" stop-color="#2b9bff"/></linearGradient></defs><circle cx="50" cy="50" r="42" fill="none" stroke="rgba(120,160,255,.2)" stroke-width="9"/>'+(len2>0?'<circle class="rg" cx="50" cy="50" r="42" fill="none" stroke="url(#rg)" stroke-width="9" stroke-linecap="round" stroke-dasharray="'+len2.toFixed(1)+' '+(C2-len2).toFixed(1)+'"/>':'')+'</svg><b>'+pc2+'%</b></div>'+
+      '<div class="tgr"><div class="ptrk"><i style="width:'+pct.toFixed(1)+'%;background:linear-gradient(90deg,#46f0a0,#2b9bff)"></i></div><div class="tgn"><b class="num">'+rp(g)+'</b> / '+rp(b.bep)+'</div>'+
+      '<div class="tag '+(ok?'in':'warn')+'">'+(ok?'Target tercapai, lebih '+rp(g-b.bep):'Kurang '+rp(b.bep-g)+' lagi dari target')+'</div></div></div></section>';
   }else{
     h+='<section class="card"><h2>Target Bersih hari ini</h2><p class="hint">Isi biaya tetap bulanan dan BBM per hari, lalu kamu bisa lihat berapa lagi yang harus didapat agar target tercapai.</p><button class="btn alt sm" type="button" data-act="page" data-p="bepset" style="align-self:flex-start">Atur biaya</button></section>';
   }
@@ -1136,7 +1265,7 @@ function viewBeranda(){
   var d0=addDays(t,-6),w=agg(d0,t),vals=[],i;
   for(i=0;i<7;i++){var dd=addDays(d0,i);vals.push({d:dd,v:sum(w.inc.filter(function(x){return x.date===dd&&x.source!=='kerja'&&x.source!=='lain'}),val)})}
   var mx=Math.max(1,b.bep,Math.max.apply(null,vals.map(function(x){return x.v})));
-  h+='<section class="card"><div class="sect-h"><h2>7 hari terakhir</h2><span class="num" style="font-weight:700;font-size:14px">'+rp(sum(vals,function(x){return x.v}))+'</span></div><div class="sub" style="margin-top:-6px">Pemasukan Gojek per hari</div>'+
+  h+='<section class="card w7"><div class="sect-h"><h2>7 hari terakhir</h2><div class="tot"><small>Total 7 hari</small><b class="num">'+rp(sum(vals,function(x){return x.v}))+'</b></div></div>'+
     '<div class="wplot">'+vals.map(function(x,k){return '<div class="wbar '+(k===6?'today':x.v>0?'on':'')+'" style="height:'+Math.max(x.v>0?4:0,x.v/mx*100).toFixed(1)+'%"></div>'}).join('')+(b.bep>0?'<div class="wline" style="bottom:'+(b.bep/mx*100).toFixed(1)+'%"><em>Target</em></div>':'')+'</div>'+
     '<div class="wlabels">'+vals.map(function(x,k){return '<span class="'+(k===6?'today':'')+'">'+DOW[parseYmd(x.d).getDay()]+'</span>'}).join('')+'</div></section>';
 
@@ -1156,7 +1285,7 @@ function viewProfil(){
   h+='<section class="card msec"><div class="lbl">Profil</div>'+
     mrow('user','var(--brand)','Identitas','data-act="page" data-p="identitas"','Nama yang tampil di aplikasi')+
     mrow('sun','var(--c-mart)','Cuaca','data-act="page" data-p="kota"',myCity()?esc(myCity().n):'Pilih kota')+'</section>';
-  h+='<section class="card msec"><div class="lbl">Tampilan</div><div class="syncbox"><b>Posisi tombol Catat</b></div><div class="authseg" role="radiogroup" aria-label="Posisi tombol Catat"><button type="button" role="radio" aria-checked="'+!prefMid()+'" aria-selected="'+!prefMid()+'" data-act="set-catat" data-v="kanan">Kanan</button><button type="button" role="radio" aria-checked="'+prefMid()+'" aria-selected="'+prefMid()+'" data-act="set-catat" data-v="tengah">Tengah</button></div><div class="syncbox" style="margin-top:14px"><b>Bahasa</b></div>'+'<div class="authseg s3" role="radiogroup" aria-label="Bahasa">'+[['id','Indonesia'],['en','English'],['su','Basa Sunda']].map(function(x){return '<button type="button" role="radio" aria-checked="'+(LANG===x[0])+'" aria-selected="'+(LANG===x[0])+'" data-act="set-lang" data-v="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div>'+'</section>';
+  h+='<section class="card msec"><div class="lbl">Tampilan</div><div class="syncbox"><b>Posisi tombol Catat</b></div><div class="authseg" role="radiogroup" aria-label="Posisi tombol Catat"><button type="button" role="radio" aria-checked="'+!prefMid()+'" aria-selected="'+!prefMid()+'" data-act="set-catat" data-v="kanan">Kanan</button><button type="button" role="radio" aria-checked="'+prefMid()+'" aria-selected="'+prefMid()+'" data-act="set-catat" data-v="tengah">Tengah</button></div><div class="syncbox" style="margin-top:14px"><b>Tema</b></div><div class="authseg s3" role="radiogroup" aria-label="Tema">'+[['auto','Otomatis'],['terang','Terang'],['gelap','Gelap']].map(function(x){return '<button type="button" role="radio" aria-checked="'+(THEME===x[0])+'" aria-selected="'+(THEME===x[0])+'" data-act="set-theme" data-v="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div><div class="syncbox" style="margin-top:14px"><b>Bahasa</b></div>'+'<div class="authseg s3" role="radiogroup" aria-label="Bahasa">'+[['id','Indonesia'],['en','English'],['su','Basa Sunda']].map(function(x){return '<button type="button" role="radio" aria-checked="'+(LANG===x[0])+'" aria-selected="'+(LANG===x[0])+'" data-act="set-lang" data-v="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div>'+'</section>';
   h+='<section class="card msec"><div class="lbl">Keuangan</div>'+
     mrow('hutang','var(--c-send)','Hutang & piutang','data-act="page" data-p="hutang"')+
     mrow('bep','var(--c-kerja)','Pengaturan Target Bersih','data-act="page" data-p="bepset"')+
@@ -1458,7 +1587,7 @@ function renderView(){
 
 /* ---------- lembar isian ---------- */
 function openSheet(kind,id){
-  S.sheet={kind:kind,id:id};var h='';if(kind==='tx'||kind==='ptx')PEND='';
+  S.sheet={kind:kind,id:id};var h='';if(kind==='tx'||kind==='ptx'){PEND='';PFILE=null}
   if(kind==='tx'){
     var preOut=S.tab==='riwayat'&&S.rw.filter==='out';
     h='<h2>Catat transaksi</h2><form id="f-tx" novalidate>'+
@@ -1750,11 +1879,11 @@ function imgGet(id){return idbDo('readonly',function(o){return o.get(id)}).catch
 function imgDel(id){return idbDo('readwrite',function(o){return o.delete(id)}).catch(function(){})}
 function imgClear(){return idbDo('readwrite',function(o){return o.clear()}).catch(function(){})}
 function attBox(){
-  return PEND?'<img class="attimg" alt="" src="'+PEND+'"><button class="link" type="button" data-act="attrm" style="color:var(--out);padding:0">Hapus foto</button>'
+  return PEND?'<img class="attimg" alt="" src="'+PEND+'"><button class="micb" type="button" data-act="ocr" style="margin-bottom:8px">'+ic('bulb')+'<span>Baca nominal dari foto</span></button><button class="link" type="button" data-act="attrm" style="color:var(--out);padding:0">Hapus foto</button>'
     :'<label class="micb" for="attf" style="cursor:pointer">'+ic('camera')+'<span>Lampirkan foto</span></label>';
 }
 function attField(){
-  return '<div class="field"><span class="fl">Foto struk atau screenshot (opsional)</span><div id="attbox">'+attBox()+'</div><input id="attf" type="file" accept="image/*" hidden></div>';
+  return '<div class="field"><span class="fl">Foto struk atau screenshot (opsional)</span><div id="attbox">'+attBox()+'</div><input id="attf" type="file" accept="image/*" hidden><p class="hint" id="ocrhint" hidden style="margin:0"></p></div>';
 }
 function attRefresh(){var b=$('#attbox');if(b)b.innerHTML=attBox()}
 function onPhotoFile(e){
@@ -1762,13 +1891,108 @@ function onPhotoFile(e){
   if(t.id==='pphoto'){
     imgLoad(f,256,true,0.85).then(function(u){put('profile',Object.assign({},S.docs.profile||{},{kind:'profile',photo:u})).then(function(){renderView();toast('Foto profil tersimpan')})},function(){toast('Foto tidak bisa dibaca.')});
   }else if(t.id==='attf'){
-    imgLoad(f,1000,false,0.7).then(function(u){PEND=u;attRefresh()},function(){toast('Foto tidak bisa dibaca.')});
+    PFILE=f;imgLoad(f,1000,false,0.7).then(function(u){PEND=u;attRefresh();ocrHint('');runOcr()},function(){toast('Foto tidak bisa dibaca.')});
   }
   try{t.value=''}catch(x){}
 }
 var LASTIMG='';
 function attMark(){LASTIMG=PEND;return PEND?{img:1}:{}}
 function attAfter(id){if(LASTIMG){var u=LASTIMG;LASTIMG='';imgSave(id,u)}}
+
+/* ---------- Baca nominal dari foto struk atau screenshot ---------- */
+var PFILE=null,OCRBUSY=false;
+var MON={jan:1,feb:2,mar:3,apr:4,mei:5,may:5,jun:6,jul:7,agu:8,aug:8,sep:9,okt:10,oct:10,nov:11,des:12,dec:12};
+function ocrAmt(str){
+  var t=String(str||'').replace(/[Oo]/g,'0').replace(/[Il|]/g,'1').replace(/[.,]+$/,'');
+  if(/^\d{1,3}([.,]\d{3})+$/.test(t))return parseInt(t.replace(/[.,]/g,''),10);
+  if(/^\d+[.,]\d{1,2}$/.test(t))return Math.round(parseFloat(t.replace(',','.')));
+  t=t.replace(/\D/g,'');return t?parseInt(t,10):0;
+}
+function ocrAmounts(line){
+  var out=[],m,re=/rp\.?\s*([0-9OoIl][0-9OoIl.,]*)/gi;
+  while((m=re.exec(line))){var v=ocrAmt(m[1]);if(v>0)out.push(v)}
+  if(!out.length){re=/\b\d{1,3}(?:[.,]\d{3})+\b/g;while((m=re.exec(line))){var v2=ocrAmt(m[0]);if(v2>0)out.push(v2)}}
+  return out;
+}
+function ocrDate(txt){
+  var m=/(\d{1,2})\s+(jan|feb|mar|apr|mei|may|jun|jul|agu|aug|sep|okt|oct|nov|des|dec)[a-z]*\.?,?\s*(\d{4})?/i.exec(txt),d,mo,y;
+  if(m){d=+m[1];mo=MON[m[2].toLowerCase()];y=m[3]?+m[3]:0}
+  else{m=/(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})/.exec(txt);if(m){d=+m[1];mo=+m[2];y=+m[3];if(y<100)y+=2000}else{m=/(\d{4})-(\d{2})-(\d{2})/.exec(txt);if(!m)return '';y=+m[1];mo=+m[2];d=+m[3]}}
+  if(!mo||mo>12||!d||d>31)return '';
+  var now=new Date(),cy=now.getFullYear();
+  if(!y){y=cy;if(new Date(y,mo-1,d)>now)y=cy-1}
+  var dt=new Date(y,mo-1,d);if(dt>now||dt.getMonth()!==mo-1)return '';
+  return fmtYmd(dt);
+}
+function parseReceipt(text){
+  var raw=String(text||''),lines=raw.split(/\n+/).map(function(l){return l.trim()}).filter(Boolean),low=lines.map(function(l){return l.toLowerCase()});
+  var isIn=/total pendapatan|pendapatan mitra|pendapatan\s*(bersih|driver)|potongan gojek/.test(raw.toLowerCase());
+  var keys=isIn?['total pendapatan','pendapatan mitra','pendapatan']:['grand total','total bayar','total pembayaran','total tagihan','total belanja','total harga','total','jumlah','tagihan','subtotal'],amt=0;
+  for(var k=0;k<keys.length&&!amt;k++){
+    for(var i=0;i<low.length&&!amt;i++){
+      if(low[i].indexOf(keys[k])<0)continue;
+      var a=ocrAmounts(lines[i]);
+      for(var j=1;j<=2&&!a.length&&i+j<lines.length;j++)a=ocrAmounts(lines[i+j]);
+      if(a.length)amt=a[a.length-1];
+    }
+  }
+  if(!amt&&isIn){for(var q=0;q<lines.length&&!amt;q++){var fa=ocrAmounts(lines[q]);if(fa.length)amt=fa[0]}}
+  if(!amt){var all=[];lines.forEach(function(l){all=all.concat(ocrAmounts(l))});all.forEach(function(v){if(v>amt)amt=v})}
+  if(!amt)return null;
+  var lo=raw.toLowerCase(),o={amount:amt,type:isIn?'in':'out',date:ocrDate(raw)};
+  if(isIn){
+    o.source='ojol';
+    o.service=/go\s?food/.test(lo)?'GoFood':/go\s?send/.test(lo)?'GoSend':/go\s?mart/.test(lo)?'GoMart':/go\s?ride|perjalanan|penumpang/.test(lo)?'GoRide':'';
+  }else{
+    o.cat=/pertamina|spbu|shell|bensin|pertalite|pertamax|solar|\bbbm\b/.test(lo)?'BBM':/parkir/.test(lo)?'Parkir':/pulsa|kuota|telkomsel|indosat|xl axiata/.test(lo)?'Pulsa':/bengkel|servis|service|\boli\b/.test(lo)?'Servis':/restoran|resto|kopi|cafe|warung|makan|food|bakso|mie\b/.test(lo)?'Makan':/indomaret|alfamart|supermarket|minimarket|belanja/.test(lo)?'Belanja':/pln|listrik|pdam|bpjs|tagihan/.test(lo)?'Tagihan':/hotel|tiket|wisata/.test(lo)?'Liburan':'Lainnya';
+  }
+  return o;
+}
+window.__parseReceipt=parseReceipt;
+function ocrHint(t,bad){var h=$('#ocrhint');if(!h)return;h.textContent=t;h.hidden=!t;h.style.color=bad?'var(--out)':''}
+function loadTess(){
+  return new Promise(function(res,rej){
+    if(window.Tesseract)return res(window.Tesseract);
+    var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';
+    s.onload=function(){window.Tesseract?res(window.Tesseract):rej(new Error('x'))};s.onerror=function(){rej(new Error('net'))};document.head.appendChild(s);
+  });
+}
+function ocrFill(o){
+  var kind=S.sheet&&S.sheet.kind,f;
+  function chk(form,name,val){var el=form.querySelector('input[name='+name+'][value="'+val+'"]');if(el){el.checked=true;return true}return false}
+  if(kind==='tx'){
+    f=$('#f-tx');if(!f)return;
+    chk(f,'type',o.type);
+    if(o.type==='in'){chk(f,'src','ojol');if(o.service)chk(f,'svc',o.service)}else if(!chk(f,'cat',o.cat))chk(f,'cat','Lainnya');
+    syncTx();$('#amt').value=nf(o.amount);if(o.date)$('#dt').value=o.date;
+  }else if(kind==='ptx'){
+    f=$('#f-ptx');if(!f)return;
+    chk(f,'ptype',o.type);
+    ff=f.querySelectorAll('[data-pg]');ff.forEach(function(el){el.hidden=el.getAttribute('data-pg')!==o.type});
+    if(o.type==='out'){if(!chk(f,'pcato',o.cat))chk(f,'pcato','Lainnya')}else chk(f,'pcati','Lainnya');
+    $('#pvamt').value=nf(o.amount);if(o.date)$('#pvdt').value=o.date;
+  }
+}
+var ff;
+function runOcr(){
+  if(OCRBUSY||!PFILE)return;
+  OCRBUSY=true;ocrHint(tr('Membaca foto… pertama kali butuh internet, bisa 10 sampai 40 detik.'));
+  var btn=$('[data-act=ocr]');if(btn)btn.disabled=true;
+  var done=function(){OCRBUSY=false;var b=$('[data-act=ocr]');if(b)b.disabled=false};
+  Promise.all([loadTess(),imgLoad(PFILE,1600,false,0.9)]).then(function(r){
+    return r[0].createWorker('ind').then(function(w){
+      var fin=function(t){return Promise.resolve(w.terminate()).then(function(){return t},function(){return t})};
+      return Promise.resolve(w.setParameters({tessedit_pageseg_mode:'6'})).then(function(){return w.recognize(r[1])}).then(function(res){return fin(res&&res.data&&res.data.text||'')},function(e){return fin('').then(function(){throw e})});
+    });
+  }).then(function(text){
+    done();var o=parseReceipt(text);
+    if(!o){ocrHint(tr('Nominal tidak terbaca. Isi manual, atau coba foto yang lebih jelas.'),true);return}
+    ocrFill(o);
+    ocrHint(tr('Terbaca')+': '+rp(o.amount)+(o.date?' · '+fmtDateShort(o.date):'')+'. '+tr('Cek dulu, lalu tekan Simpan.'));
+  },function(e){
+    done();ocrHint(e&&e.message==='net'?tr('Butuh internet untuk memuat pembaca foto. Coba lagi saat online.'):tr('Foto tidak bisa dibaca. Isi manual.'),true);
+  });
+}
 
 /* ---------- Suara: ucapkan catatan, aplikasi mengisi form ---------- */
 var VW=(function(){
@@ -1895,7 +2119,8 @@ function act(a,ds,el,ev){
   else if(a==='ddir'){S.debtDir=ds.d;S.confirm=null;renderView()}
   else if(a==='pay'){openSheet('pay',ds.id)}
   else if(a==='mic'){startVoice()}
-  else if(a==='attrm'){PEND='';attRefresh()}
+  else if(a==='attrm'){PEND='';PFILE=null;attRefresh();ocrHint('')}
+  else if(a==='ocr'){runOcr()}
   else if(a==='viewimg'){openSheet('imgview',ds.id)}
   else if(a==='rm-photo'){var pp=Object.assign({},S.docs.profile||{},{kind:'profile'});delete pp.photo;put('profile',pp).then(function(){renderView();toast('Foto dihapus')})}
   else if(a==='pbud'){openSheet('pbud')}
@@ -1928,6 +2153,7 @@ function act(a,ds,el,ev){
   else if(a==='logout'){openSheet('logout')}
   else if(a==='do-logout'){doLogout()}
   else if(a==='set-lang'){put('profile',Object.assign({},S.docs.profile||{},{kind:'profile',lang:ds.v}));setLang(ds.v)}
+  else if(a==='set-theme'){THEME=ds.v;try{localStorage.setItem(LST,THEME)}catch(e){}applyTheme();renderView()}
   else if(a==='set-catat'){put('profile',Object.assign({},S.docs.profile||{},{kind:'profile',catat:ds.v}))}
   else if(a==='city-search'){citySearch()}
   else if(a==='pick-city'){pickCity(ds.i)}
