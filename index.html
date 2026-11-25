@@ -257,7 +257,9 @@ input:focus,select:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0
 .chart text{font-family:var(--font-num);font-size:11px;fill:var(--muted)}
 .chart .g{stroke:var(--line);stroke-width:1;stroke-dasharray:3 3}
 .chart .z{stroke:var(--muted);stroke-width:1}
-.chart .bm{fill:var(--in)} .chart .bk{fill:var(--out)}
+.chart .bm{fill:url(#gm);stroke:rgba(255,255,255,.4);stroke-width:1} .chart .bk{fill:url(#gk);stroke:rgba(255,255,255,.4);stroke-width:1}
+.chart .cm{fill:#b9ffdc;stroke:rgba(255,255,255,.5);stroke-width:.6} .chart .ck{fill:#ffc2c6;stroke:rgba(255,255,255,.5);stroke-width:.6}
+:root[data-theme="dark"] .chart .bm,:root[data-theme="dark"] .chart .cm{filter:drop-shadow(0 0 5px rgba(70,240,160,.45))}:root[data-theme="dark"] .chart .bk,:root[data-theme="dark"] .chart .ck{filter:drop-shadow(0 0 5px rgba(255,107,115,.4))}
 .legend{display:flex;gap:14px;font-size:13px;color:var(--muted)}
 .legend span{display:flex;align-items:center;gap:6px}
 
@@ -389,8 +391,8 @@ input[type=file]{width:100%;font-size:14px;padding:12px;border:1.5px dashed var(
 .tgr{flex:1;min-width:0;display:flex;flex-direction:column;gap:9px;align-items:flex-end}
 .tgr .ptrk{width:100%;height:11px;border-radius:99px;background:rgba(120,160,255,.18);overflow:hidden}
 .tgr .ptrk i{display:block;height:100%;border-radius:99px;transition:width .6s ease-out}
-.tgr .tgn{font-size:15px;color:var(--muted);white-space:nowrap}
-.tgr .tgn b{color:var(--ink);font-size:20px}
+.tgr .tgn{font-size:14px;color:var(--muted);text-align:right}
+.tgr .tgn b{color:var(--ink);font-size:clamp(15px,4.8vw,19px)}
 .wplot{height:128px;gap:10px;padding-top:8px}
 .wplot .wbar{position:relative;border-radius:5px;border:1px solid rgba(255,255,255,.38);background:linear-gradient(180deg,#5af5b0,#2f7bff)!important}
 .wplot .wbar::before{content:"";position:absolute;left:-1px;right:-1px;top:-6px;height:12px;background:linear-gradient(180deg,#b9ffdc,#62f2b0);clip-path:polygon(0 50%,22% 0,78% 0,100% 50%,78% 100%,22% 100%)}
@@ -413,7 +415,7 @@ input[type=file]{width:100%;font-size:14px;padding:12px;border:1.5px dashed var(
  --c-ride:#46f0a0; --c-send:#ffc24d; --c-food:#ff8a50; --c-mart:#b08cff; --c-kerja:#58b0ff; --c-lain:#9db3cf;
  --hero-a:#0b1a4a; --hero-b:#0d4a80; --hero-c:#2f9a74;
  --shadow:0 10px 28px rgba(0,0,0,.4); --shadow-hero:0 16px 34px rgba(0,0,0,.5); color-scheme:dark;}
-:root:not([data-theme="light"]) body{background:radial-gradient(90% 45% at 0% 0%,rgba(36,104,255,.22),transparent 62%),radial-gradient(70% 40% at 100% 20%,rgba(34,230,160,.11),transparent 60%),var(--bg);background-attachment:fixed}
+:root:not([data-theme="light"]) body{background:radial-gradient(320px 320px at 0% 45%,rgba(36,104,255,.22),transparent),radial-gradient(300px 300px at 100% 62%,rgba(34,230,160,.12),transparent),var(--bg);background-attachment:fixed}
 :root:not([data-theme="light"]) .card,:root:not([data-theme="light"]) .stat,:root:not([data-theme="light"]) .dn,:root:not([data-theme="light"]) .wx,:root:not([data-theme="light"]) .iconbtn,:root:not([data-theme="light"]) .datenav .dl,:root:not([data-theme="light"]) .box{background:linear-gradient(165deg,rgba(255,255,255,.075),rgba(255,255,255,.02)),var(--surface);border:1px solid rgba(110,165,255,.26);box-shadow:0 12px 30px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06)}
 :root:not([data-theme="light"]) .hero{border:1.5px solid transparent;background:linear-gradient(160deg,rgba(18,44,98,.94),rgba(10,38,70,.92) 55%,rgba(13,72,70,.9)) padding-box,linear-gradient(135deg,#3b8cff,#46f0a0) border-box;box-shadow:0 0 28px rgba(60,160,255,.30),0 14px 34px rgba(0,0,0,.5)}
 :root:not([data-theme="light"]) .hero .big{text-shadow:0 0 22px rgba(120,200,255,.45)}
@@ -441,7 +443,7 @@ input[type=file]{width:100%;font-size:14px;padding:12px;border:1.5px dashed var(
  --c-ride:#46f0a0; --c-send:#ffc24d; --c-food:#ff8a50; --c-mart:#b08cff; --c-kerja:#58b0ff; --c-lain:#9db3cf;
  --hero-a:#0b1a4a; --hero-b:#0d4a80; --hero-c:#2f9a74;
  --shadow:0 10px 28px rgba(0,0,0,.4); --shadow-hero:0 16px 34px rgba(0,0,0,.5); color-scheme:dark;}
-:root[data-theme="dark"] body{background:radial-gradient(90% 45% at 0% 0%,rgba(36,104,255,.22),transparent 62%),radial-gradient(70% 40% at 100% 20%,rgba(34,230,160,.11),transparent 60%),var(--bg);background-attachment:fixed}
+:root[data-theme="dark"] body{background:radial-gradient(320px 320px at 0% 45%,rgba(36,104,255,.22),transparent),radial-gradient(300px 300px at 100% 62%,rgba(34,230,160,.12),transparent),var(--bg);background-attachment:fixed}
 :root[data-theme="dark"] .card,:root[data-theme="dark"] .stat,:root[data-theme="dark"] .dn,:root[data-theme="dark"] .wx,:root[data-theme="dark"] .iconbtn,:root[data-theme="dark"] .datenav .dl,:root[data-theme="dark"] .box{background:linear-gradient(165deg,rgba(255,255,255,.075),rgba(255,255,255,.02)),var(--surface);border:1px solid rgba(110,165,255,.26);box-shadow:0 12px 30px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06)}
 :root[data-theme="dark"] .hero{border:1.5px solid transparent;background:linear-gradient(160deg,rgba(18,44,98,.94),rgba(10,38,70,.92) 55%,rgba(13,72,70,.9)) padding-box,linear-gradient(135deg,#3b8cff,#46f0a0) border-box;box-shadow:0 0 28px rgba(60,160,255,.30),0 14px 34px rgba(0,0,0,.5)}
 :root[data-theme="dark"] .hero .big{text-shadow:0 0 22px rgba(120,200,255,.45)}
@@ -461,6 +463,27 @@ input[type=file]{width:100%;font-size:14px;padding:12px;border:1.5px dashed var(
 :root[data-theme="dark"] .seg4 button[aria-selected="true"],:root[data-theme="dark"] .seg3 button[aria-selected="true"],:root[data-theme="dark"] .seg2 button[aria-selected="true"]{box-shadow:0 0 14px rgba(47,140,255,.5)}
 :root[data-theme="dark"] input[type=text],:root[data-theme="dark"] input[type=email],:root[data-theme="dark"] input[type=password],:root[data-theme="dark"] input[type=number],:root[data-theme="dark"] input[type=date],:root[data-theme="dark"] input[type=month],:root[data-theme="dark"] select{background:rgba(255,255,255,.04)}
 :root[data-theme="dark"] #sheet{background:rgba(2,6,16,.72)}
+
+/* ===== Perapian ===== */
+.hero .two.nl{grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);gap:8px}
+.hero .two.nl>div{gap:8px;min-width:0}
+.hero .two.nl .ai{width:36px;height:36px}
+.hero .two.nl .ai svg{width:19px;height:19px}
+.hero .two.nl .tx{flex:1;min-width:0}
+.hero .two.nl b{font-size:clamp(12.5px,4vw,17px);letter-spacing:-.035em;white-space:nowrap}
+.hero .two.nl b.tb{font-size:clamp(12.5px,4vw,17px)}
+.hero .two.nl .lbl{font-size:11px;letter-spacing:.07em}
+.hero .two.nl .b.bl2,.hero .two.nl .ai.bl2{background:rgba(88,176,255,.2);color:#8fcaff}
+.bephero .two.nl .a .ai{background:rgba(70,240,160,.2);color:#6dffb0}
+.bephero .two.nl .b .ai{background:rgba(88,176,255,.2);color:#8fcaff}
+.bephero .bnote{border-top:1px solid rgba(255,255,255,.18);padding-top:12px;display:flex;align-items:center;gap:10px}
+.bephero .bnote .bi{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);color:var(--hero-num)}
+.bephero .bnote p{margin:0;font-size:13px;line-height:1.4;color:var(--hero-mute)}
+.wx svg.i{display:inline-block!important;width:17px;height:17px;color:var(--brand);margin:0 2px 0 0;vertical-align:-3px;flex:none}
+.wx .wr{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.wx .wr::before{content:"\2022";margin-right:4px;color:var(--muted)}
+.wx .wr small.wc::before{content:"\00b7";margin-right:5px}
+.ring2 b.sm{font-size:19px}
 </style>
 
 <div class="app" id="view"></div>
@@ -1255,7 +1278,7 @@ function viewBeranda(){
     var pct=Math.min(100,g/b.bep*100),ok=g>=b.bep,col=ok?'var(--in)':'var(--c-send)';
     var pc2=Math.round(g/b.bep*100),C2=2*Math.PI*42,len2=Math.min(1,g/b.bep)*C2;
     h+='<section class="card compact"><div class="sect-h"><h2>Target Bersih hari ini</h2><button class="link" type="button" data-act="page" data-p="bep">Detail ›</button></div>'+
-      '<div class="tg"><div class="ring2"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#46f0a0"/><stop offset="1" stop-color="#2b9bff"/></linearGradient></defs><circle cx="50" cy="50" r="42" fill="none" stroke="rgba(120,160,255,.2)" stroke-width="9"/>'+(len2>0?'<circle class="rg" cx="50" cy="50" r="42" fill="none" stroke="url(#rg)" stroke-width="9" stroke-linecap="round" stroke-dasharray="'+len2.toFixed(1)+' '+(C2-len2).toFixed(1)+'"/>':'')+'</svg><b>'+pc2+'%</b></div>'+
+      '<div class="tg"><div class="ring2"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#46f0a0"/><stop offset="1" stop-color="#2b9bff"/></linearGradient></defs><circle cx="50" cy="50" r="42" fill="none" stroke="rgba(120,160,255,.2)" stroke-width="9"/>'+(len2>0?'<circle class="rg" cx="50" cy="50" r="42" fill="none" stroke="url(#rg)" stroke-width="9" stroke-linecap="round" stroke-dasharray="'+len2.toFixed(1)+' '+(C2-len2).toFixed(1)+'"/>':'')+'</svg><b'+(pc2>=100?' class="sm"':'')+'>'+(pc2>999?'999+':pc2)+'%</b></div>'+
       '<div class="tgr"><div class="ptrk"><i style="width:'+pct.toFixed(1)+'%;background:linear-gradient(90deg,#46f0a0,#2b9bff)"></i></div><div class="tgn"><b class="num">'+rp(g)+'</b> / '+rp(b.bep)+'</div>'+
       '<div class="tag '+(ok?'in':'warn')+'">'+(ok?'Target tercapai, lebih '+rp(g-b.bep):'Kurang '+rp(b.bep-g)+' lagi dari target')+'</div></div></div></section>';
   }else{
@@ -1408,12 +1431,14 @@ function chartSvg(days,mode){
   var mx=niceCeil(Math.max.apply(null,vals.concat([0]))),mn=Math.min.apply(null,vals.concat([0]));mn=mn<0?-niceCeil(-mn):0;
   if(mx===0&&mn===0)mx=100000;
   function y(v){return T+ph*(mx-v)/(mx-mn)}
-  var ticks=mn<0?[mx,0,mn]:[mx,mx/2,0],s='<svg class="chart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Grafik per hari">';
+  var ticks=mn<0?[mx,0,mn]:[mx,mx/2,0],s='<svg class="chart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Grafik per hari"><defs><linearGradient id="gm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5af5b0"/><stop offset="1" stop-color="#2f7bff"/></linearGradient><linearGradient id="gk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a8f"/><stop offset="1" stop-color="#ff4d7d"/></linearGradient></defs>';
   ticks.forEach(function(v){s+='<line class="'+(v===0?'z':'g')+'" x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v).toFixed(1)+'" y2="'+y(v).toFixed(1)+'"/><text x="'+(L-6)+'" y="'+(y(v)+3).toFixed(1)+'" text-anchor="end">'+short(v)+'</text>'});
   var n=days.length,slot=pw/n,gw=Math.min(slot*0.72,40),every=n<=7?1:Math.ceil(n/8);
   days.forEach(function(d,i){
     var cx=L+slot*i+slot/2;
-    function bar(v,x,w,cls){if(!v)return '';var y0=y(0),y1=y(v),top=Math.min(y0,y1),hh=Math.max(1,Math.abs(y0-y1));return '<rect class="'+cls+'" x="'+x.toFixed(1)+'" y="'+top.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+hh.toFixed(1)+'" rx="2"/>'}
+    function bar(v,x,w,cls){if(!v)return '';var y0=y(0),y1=y(v),top=Math.min(y0,y1),hh=Math.max(1,Math.abs(y0-y1)),cy=v>=0?top:top+hh,c=cls==='bm'?'cm':'ck';
+      var cap='<polygon class="'+c+'" points="'+x.toFixed(1)+','+cy.toFixed(1)+' '+(x+w*0.22).toFixed(1)+','+(cy-4).toFixed(1)+' '+(x+w*0.78).toFixed(1)+','+(cy-4).toFixed(1)+' '+(x+w).toFixed(1)+','+cy.toFixed(1)+' '+(x+w*0.78).toFixed(1)+','+(cy+4).toFixed(1)+' '+(x+w*0.22).toFixed(1)+','+(cy+4).toFixed(1)+'"/>';
+      return '<rect class="'+cls+'" x="'+x.toFixed(1)+'" y="'+top.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+hh.toFixed(1)+'" rx="2"/>'+(hh>6?cap:'')}
     if(mode==='arus'){s+=bar(d.m,cx-gw/2,gw/2-0.5,'bm')+bar(d.k,cx+0.5,gw/2-0.5,'bk')}
     else{var b=d.m-d.k;s+=bar(b,cx-gw/2,gw,b>=0?'bm':'bk')}
     if(i%every===0){var lab=n<=7?DOW[parseYmd(d.d).getDay()]:String(parseYmd(d.d).getDate());s+='<text x="'+cx.toFixed(1)+'" y="'+(H-7)+'" text-anchor="middle">'+lab+'</text>'}
@@ -1511,9 +1536,9 @@ function bepStatus(title,sub,got,bep){
 }
 function viewBep(){
   var st=getSettings(),b=bepCalc(st),t=todayStr(),a=agg(t,t),w=agg(weekStart(t),t),ym=monthRange(curYM()),m=agg(ym[0],ym[1]);
-  var h='<div class="bepbn">'+pageHead('Target Bersih','Pemasukan yang harus didapat agar biaya operasional tertutup')+
-    '<section class="bepcard"><div class="bprow"><span class="bpic">'+ic('bullseye')+'</span><div class="bcol"><span class="bl">Harian</span><b class="tb">'+big(b.bep)+'</b></div><i class="vdiv"></i><div class="bcol"><span class="bl">Mingguan</span><b class="tb">'+big(b.minggu)+'</b></div></div>'+
-    '<div class="bnote"><span class="bi">'+ic('bulb')+'</span><p>Minimal pemasukan agar impas. Mingguan sama dengan harian dikali '+b.wd+' hari kerja.</p></div></section></div>';
+  var h=pageHead('Target Bersih','Pemasukan yang harus didapat agar biaya operasional tertutup')+
+    '<section class="hero bephero"><div class="two nl"><div class="a"><span class="ai">'+ic('bullseye')+'</span><span class="tx"><span class="lbl">Harian</span><b class="tb">'+big(b.bep)+'</b></span></div><div class="vd"></div><div class="b"><span class="ai bl2">'+ic('cal')+'</span><span class="tx"><span class="lbl">Mingguan</span><b class="tb">'+big(b.minggu)+'</b></span></div></div>'+
+    '<div class="bnote"><span class="bi">'+ic('bulb')+'</span><p>Minimal pemasukan agar impas. Mingguan sama dengan harian dikali '+b.wd+' hari kerja.</p></div></section>';
   if(b.bep<=0)h+='<div class="card empty"><b>Biaya belum diisi</b>Isi biaya tetap bulanan dan BBM per hari supaya target bisa dihitung.</div>';
   else h+='<section class="card bst"><h2 class="stt">'+ic('analisa')+'Status</h2>'+bepStatus('Hari ini','Pemasukan Gojek hari ini',a.inSrc.ojol,b.bep)+bepStatus('Minggu ini','Semua pemasukan minggu ini',w.masuk,b.minggu)+'</section>';
   function stat2(ico,tc,lbl,val,sub){return '<div class="stat st2"><span class="sic" style="--tc:var('+tc+')">'+ic(ico)+'</span><div class="stx"><span class="lbl">'+lbl+'</span><b>'+val+'</b>'+(sub?'<span class="sub">'+sub+'</span>':'')+'</div></div>'}
@@ -2217,9 +2242,9 @@ function wxChip(){
   var c=myCity(),dd='<small class="wd">'+esc(DF(new Date(),{w:1,d:1,m:'l'}))+'</small>',h='<button class="wx" id="wxchip" type="button" data-act="page" data-p="kota" aria-label="Cuaca">';
   if(!c)return h+'<span class="wt">'+dd+'<span class="wr"><small>Atur kota</small></span></span>'+ic('sun')+'</button>';
   var ok=WX&&WX.k===c.lat+','+c.lon;
-  if(!ok)return h+'<span class="wt">'+dd+'<span class="wr"><b>'+(S.wxBusy?'…':'--')+'</b><small>'+esc(c.n)+'</small></span></span>'+ic('cloud')+'</button>';
+  if(!ok)return h+'<span class="wt">'+dd+'<span class="wr">'+ic('cloud')+'<b>'+(S.wxBusy?'…':'--')+'</b><small class="wc">'+esc(c.n)+'</small></span></span></button>';
   var i=wxInfo(WX.code),rainy=i[0]==='rain'||i[0]==='bolt',lbl=(!rainy&&WX.pop>=30)?'Hujan '+WX.pop+'%':i[1];
-  return h+'<span class="wt">'+dd+'<span class="wr"><b>'+Math.round(WX.t)+'°</b><small>'+esc(lbl)+'</small></span></span>'+ic(i[0])+'</button>';
+  return h+'<span class="wt">'+dd+'<span class="wr">'+ic(i[0])+'<b>'+Math.round(WX.t)+'°</b><small>'+esc(lbl)+'</small><small class="wc">'+esc(c.n)+'</small></span></span></button>';
 }
 function paintWx(){var el=$('#wxchip');if(el)el.outerHTML=wxChip()}
 function loadWx(force){
